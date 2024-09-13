@@ -14,7 +14,7 @@ function App() {
     e.preventDefault();
     try {
       const response = await axios.post(
-        "https://nodemailer-xltk.onrender.com/sendEmail",
+        "https://nodemail-2.onrender.com/sendEmail",
         {
           name,
           email,

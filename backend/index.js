@@ -30,6 +30,7 @@ app.post("/sendEmail", (req, res) => {
     .sendMail(msg)
     .then((info) => {
       console.log("Email Sent: " + info.response);
+      res.send("Done");
     })
     .catch((err) => console.log(err));
 });
