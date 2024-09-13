@@ -20,9 +20,9 @@ app.post("/sendEmail", (req, res) => {
   });
 
   let msg = {
-    from: process.env.MY_USERNAME,
-    to: process.env.name,
-    subject: "You have a new message from your fans",
+    from: process.env.name,
+    to: email,
+    subject: "Message sent using nodemailer",
     text: `hi ${name} with email ${email}. Here is a message - ${message}`,
   };
 
