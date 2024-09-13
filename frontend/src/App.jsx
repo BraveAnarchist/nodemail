@@ -21,7 +21,7 @@ function App() {
           message,
         }
       );
-      if (response.status === 200 && response.statusText === "Ok") {
+      if (response.status === 200 || response.statusText === "Ok") {
         setDataSaved(!dataSaved);
       }
     } catch (e) {
@@ -37,7 +37,7 @@ function App() {
 
         <input
           type="text"
-          placeholder="Enter your name"
+          placeholder="Enter name for recipent"
           value={name}
           name="name"
           onChange={(e) => setName(e.target.value)}
@@ -45,7 +45,7 @@ function App() {
         <br />
         <input
           type="email"
-          placeholder="Enter your email"
+          placeholder="Enter the receiver email"
           value={email}
           name="email"
           onChange={(e) => setEmail(e.target.value)}

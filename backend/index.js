@@ -30,9 +30,11 @@ app.post("/sendEmail", (req, res) => {
     .sendMail(msg)
     .then((info) => {
       console.log("Email Sent: " + info.response);
-      res.send("Done");
+      res.status(200).send("Done");
     })
-    .catch((err) => console.log(err));
+    .catch((err) => {console.log(err)
+      res.status(403).send("error:"+ err)
+    });
 });
 
 app.listen(port, () => console.log("Server has started"));
